@@ -1,0 +1,153 @@
+:root {
+  --primary: #2A2F4F;
+  --secondary: #917FB3;
+  --accent: #E5BEEC;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  min-height: 100vh;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.create-account {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-account:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.main-container {
+  padding: 6rem 1rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--accent), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.upload-button {
+  background: var(--secondary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.result-section {
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.result-image {
+  max-width: 100%;
+  border-radius: 15px;
+  border: 2px solid var(--accent);
+}
+
+.download-button {
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 25px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.slim-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+}
+
+.language-toggle {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 0.3rem;
+  display: flex;
+}
+
+.language-toggle button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-toggle button.active {
+  background: var(--secondary);
+  color: white;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
