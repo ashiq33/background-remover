@@ -35,7 +35,7 @@ const App = () => {
     if (resultImage) {
       const link = document.createElement('a');
       link.href = resultImage;
-      link.download = 'background-removed.png';
+      link.download = 'removed by ASHIQ.png';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
